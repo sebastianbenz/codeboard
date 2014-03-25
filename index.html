@@ -8,7 +8,6 @@
     <meta name="description" content="A collaborative coding environment.">
     <meta name="author" content="Sebastian Benz (@sebabenz)">
     <link rel="shortcut icon" href="favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500' rel='stylesheet' type='text/css'>
     <title>codeboard</title>
 
     <!-- Bootstrap core CSS -->
@@ -31,6 +30,7 @@
     <script src="codemirror/addon/search/searchcursor.js"></script>
     <script src="codemirror/mode/javascript/javascript.js"></script>
     <script src="codemirror/mode/java/java.js"></script>
+    <script src="codemirror/mode/clojure/clojure.js"></script>
     <script src="codemirror/mode/clike/clike.js"></script>
     <script src="codemirror/mode/ruby/ruby.js"></script>
     <script src="codemirror/addon/edit/matchbrackets.js"></script>
@@ -41,14 +41,14 @@
     <link rel="stylesheet" href="codemirror/theme/solarized.css" />
 
     <!-- Include Firepad -->
-    <script src="firepad.js"></script>
-    <link rel="stylesheet" href="firepad.css" />
+    <script src="js/firepad.js"></script>
+    <link rel="stylesheet" href="css/firepad.css" />
 
     <!-- Helper for generating URLs / Firebase references for example purposes.
          Not necessary in production apps. -->
-    <script src="example-helper.js"></script>
+    <script src="js/example-helper.js"></script>
     <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/codeboard.css" rel="stylesheet">
   </head>
 
   <body class="cm-s-solarized cm-s-dark">
@@ -67,18 +67,20 @@
             <li>
             <a class="selected" id="default" href="#" onclick="setKeyMap('default')">Default</a></li>
             <li>
-              <a class="" id="vim" href="#" onclick="setKeyMap('vim')">Vim</a></li>
-            <li>
               <a class="" id="emacs" href="#" onclick="setKeyMap('emacs')">Emacs</a></li>
+            <li>
+              <a class="" id="vim" href="#" onclick="setKeyMap('vim')">Vim</a></li>
             <li class="divider"></li> 
-            <li>
-              <a class="" id="ruby" href="#" onclick="setMode('text/x-ruby')">Ruby</a></li>
-            <li>
-              <a class="selected" id="javascript" href="#" onclick="setMode('javascript')">Javascript</a></li>
             <li>
               <a class="" id="cpp" href="#" onclick="setMode('text/x-c++src')">C++</a></li>
             <li>
+              <a class="" id="clojure" href="#" onclick="setMode('text/x-clojure')">Clojure</a></li>
+            <li>
               <a class="" id="java" href="#" onclick="setMode('text/x-java')">Java</a></li>
+            <li>
+              <a class="selected" id="javascript" href="#" onclick="setMode('javascript')">Javascript</a></li>
+            <li>
+              <a class="" id="ruby" href="#" onclick="setMode('text/x-ruby')">Ruby</a></li>
           </ul>
         </li>
       </ul>
