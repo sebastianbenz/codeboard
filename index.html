@@ -104,12 +104,6 @@
         }
       });
 
-      var pending;
-      codeMirror.on("change", function() {
-        clearTimeout(pending);
-        pending = setTimeout(update, 400);
-      });
-
       setMode = function(mode) {
         codeMirror.setOption("mode", mode);
         console.log("setting mode to " + mode);
