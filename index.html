@@ -94,6 +94,12 @@
   </nav>
 
     <div id="firepad-container"></div>
+    <div id="footer">
+      <div class="container">
+        <p >Build at <a href="http://esrlabs.com">E.S.R. Labs</a> by <a href="https://twitter.com/sebabenz">@sebabenz</a> with <a href="http://www.firepad.io/">firepad</a> and <a href="http://codemirror.net/">codemirror</a>.</p>
+      </div>
+    </div>
+
     <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -102,9 +108,9 @@
             <h4 class="modal-title">Share</h4>
           </div>
           <div class="modal-body">
-            <p>Anyone with this link can see and edit your codeboard.</p>
+            <p>Anyone with this link can see and edit your codeboard.
             <pre><script>document.write(window.location.href)</script></pre>
-            <a href="#" onclick="shareByMail()">Share via email</a>
+            <a href="#" onclick="shareByMail()">Share via email</a></p>
             </div>
 
           <div class="modal-footer">
@@ -171,7 +177,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="assets/js/docs.min.js"></script>
   </body>
 </html>
 

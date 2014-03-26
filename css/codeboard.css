@@ -11,6 +11,39 @@ body {
   background-color: #002b36;
 }
 
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #586e75;
+}
+
+#footer a{
+  color: #586e75;
+  text-decoration: none;
+}
+
+#footer a:hover, #footer a:focus{
+  color: #eee;
+  text-decoration: none;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid
+  color: #333;
+  background-color: transparent;
+  border-color: #999;
+}
+
 .container {
   width: 100%; 
 }
@@ -96,4 +129,28 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
  border-right: 0px solid; 
 }
 
+.modal-content {
+  background-color: #e5e5e5;
+  font-size: 14px;
+  border-radius: 10px
+}
+
+.modal-footer{
+  border-top: 1px solid #bbb;
+}
+
+.modal-header{
+  border-bottom: 1px solid #bbb;
+}
+
+.modal-content a{
+  color: #000;
+  text-decoration: underline;
+}
+
+.modal-content pre{
+  border: 1px solid #bbb;
+  background-color: #eee;
+  font-size: 14px;
+}
 
