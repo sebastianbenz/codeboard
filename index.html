@@ -156,11 +156,10 @@
 
     sendMail = function(subject, body) {
       var link = "mailto:"  
-               + "&subject=" + escape(subject)  
+               + "?subject=" + escape(subject)  
                + "&body=" + escape(body)
       ;
-      console.log(link)
-      window.location.href = link
+      window.open(link, '_blank')
     }
 
 
