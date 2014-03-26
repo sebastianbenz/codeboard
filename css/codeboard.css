@@ -2,19 +2,13 @@
  * Globals
  */
 
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
 html { height: 100%; }
 body { 
   margin: 0; 
   height: 100%; 
   position: relative; 
   font-size: 18px;
+  background-color: #002b36;
 }
 
 .container {
@@ -53,6 +47,10 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   text-shadow: none;
   background-color: transparent;
   border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: trans
 }
 
 .firepad {

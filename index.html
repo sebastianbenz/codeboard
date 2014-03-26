@@ -51,7 +51,7 @@
     <link href="css/codeboard.css" rel="stylesheet">
   </head>
 
-  <body class="cm-s-solarized cm-s-dark">
+  <body class="">
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -81,6 +81,12 @@
               <a class="selected" id="javascript" href="#" onclick="setMode('javascript')">Javascript</a></li>
             <li>
               <a class="" id="ruby" href="#" onclick="setMode('text/x-ruby')">Ruby</a></li>
+            <li class="divider"></li> 
+            <li>
+              <a class="" href="#" data-toggle="modal" data-target="#share">
+                <span class="glyphicon glyphicon-share-alt"></span>
+                Share
+              </a></li>
           </ul>
         </li>
       </ul>
@@ -88,6 +94,25 @@
   </nav>
 
     <div id="firepad-container"></div>
+    <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Share</h4>
+          </div>
+          <div class="modal-body">
+            <p>Anyone with this link can see and edit your codeboard.</p>
+            <pre><script>document.write(window.location.href)</script></pre>
+            <a href="#" onclick="shareByMail()">Share via email</a>
+            </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <script>
       //// Initialize Firebase.
@@ -123,6 +148,20 @@
         codeMirror.setOption("vimMode", mode == 'vim');
      }
 
+    shareByMail = function() {
+      var subject = 'Join our codeboard';
+      var body = 'Hello!\n\nYou have been invited to a codeboard:\n\n' + window.location.href + '\n\nHappy coding!';
+      sendMail(subject, body);
+    }
+
+    sendMail = function(subject, body) {
+      var link = "mailto:"  
+               + "&subject=" + escape(subject)  
+               + "&body=" + escape(body)
+      ;
+      console.log(link)
+      window.location.href = link
+    }
 
 
 
