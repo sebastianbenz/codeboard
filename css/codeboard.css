@@ -18,19 +18,14 @@ body {
   /* Set the fixed height of the footer here */
   height: 30px;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: #586e75;
 }
 
-#footer a{
+#footer a{ 
   color: #586e75;
-  text-decoration: none;
 }
 
-#footer a:hover, #footer a:focus{
-  color: #eee;
-  text-decoration: none;
-}
 
 .btn-default,
 .btn-default:hover,
@@ -46,6 +41,10 @@ body {
 
 .container {
   width: 100%; 
+}
+
+.dropdown-menu li btn {
+  padding: 3px 20px;
 }
 
 .dropdown-menu {
@@ -83,7 +82,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: trans
+  background-color: transparent;
 }
 
 .firepad {
@@ -144,7 +143,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .modal-content a{
-  color: #000;
+  color: #111;
   text-decoration: underline;
 }
 
@@ -153,4 +152,19 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background-color: #eee;
   font-size: 14px;
 }
+
+.popover-content {
+  border: none;
+  background-color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  color: #111;
+}
+
+#footer .popover-content a:focus,
+#footer .popover-content a:hover,
+#footer .popover-content a {
+  color: #111;
+}
+
 

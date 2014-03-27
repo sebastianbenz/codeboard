@@ -84,8 +84,7 @@
             <li class="divider"></li> 
             <li>
               <a class="" href="#" data-toggle="modal" data-target="#share">
-                <span class="glyphicon glyphicon-share-alt"></span>
-                Share
+                <span class="glyphicon glyphicon-share" style='font-size: 13px'></span> Share
               </a></li>
           </ul>
         </li>
@@ -96,7 +95,9 @@
     <div id="firepad-container"></div>
     <div id="footer">
       <div class="container">
-        <p >Build at <a href="http://esrlabs.com">E.S.R. Labs</a> by <a href="https://twitter.com/sebabenz">@sebabenz</a> with <a href="http://www.firepad.io/">firepad</a> and <a href="http://codemirror.net/">codemirror</a>.</p>
+        <a href="#"  rel="popover" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="Build at <a href='http://esrlabs.com'>E.S.R. Labs</a> by <a href='https://twitter.com/sebabenz'>@sebabenz</a> with <a href='http://www.firepad.io/'>firepad</a> and <a href='http://codemirror.net/'>codemirror</a>." data-original-title="" title="">
+          <span class="glyphicon glyphicon-star"></span>
+                        </a>
       </div>
     </div>
 
@@ -111,7 +112,7 @@
             <p>Anyone with this link can see and edit your codeboard.
             <pre><script>document.write(window.location.href)</script></pre>
             <a href="#" onclick="shareByMail()">Share via email</a></p>
-            </div>
+          </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -120,6 +121,12 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script>
       //// Initialize Firebase.
       var firepadRef = getExampleRef();
@@ -168,15 +175,19 @@
       window.open(link, '_blank')
     }
 
+    window.onload = function() {
+e = $("a[rel=popover]")
+e.popover({
+    html:true, 
+    trigger:'hover',
+    delay: {hide: 500},
+    container: e, 
+})
+
+    }
 
 
     </script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
 
