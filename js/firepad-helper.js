@@ -10,8 +10,5 @@ function getExampleRef() {
     window.location = window.location + '#' + ref.name(); // add it as a hash to the URL.
   }
 
-  if (typeof console !== 'undefined')
-    console.log('Firebase data: ', ref.toString());
-
   return ref;
 }

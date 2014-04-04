@@ -8,11 +8,10 @@
     <meta name="description" content="A collaborative coding environment.">
     <meta name="author" content="Sebastian Benz (@sebabenz)">
     <link rel="shortcut icon" href="favicon.ico">
-    <title>codeboard</title>
+    <title>codeboard - a simple collaborative editor</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -20,19 +19,14 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
     <link rel="stylesheet" href="codemirror/addon/dialog/dialog.css">
-
     <link rel="stylesheet" href="codemirror/lib/codemirror.css" />
     <link rel="stylesheet" href="codemirror/theme/solarized.css" />
-
     <link rel="stylesheet" href="css/firepad.css" />
-
-    <!-- Custom styles for this template -->
     <link href="css/codeboard.css" rel="stylesheet">
   </head>
 
-  <body class="">
+  <body>
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -95,7 +89,7 @@
           <div class="modal-body">
             <p>Anyone with this link can see and edit your codeboard.
             <pre id='share-url'></pre>
-            <a href="#" onclick="shareByMail()">Share via email</a></p>
+            <a id="share-action" href="#" >Share via email</a></p>
           </div>
 
           <div class="modal-footer">
